@@ -36,6 +36,28 @@ body {
 }
 
 
+/*
+ *  STYLE 8
+ */
+
+#style-8::-webkit-scrollbar-track
+{
+	border: 1px solid white;
+	background-color: black;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: black;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #66b2ff;	
+  /* border-radius: 100px; */
+}
+
 /* mdx styling */
 .prose {
   h1 {

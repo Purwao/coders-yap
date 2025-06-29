@@ -4,12 +4,24 @@
   import BlogPost from "./components/BlogPost";
   import { TAGS } from "./constant";
   import LenisProvider from "./providers/LenisProvider";
+  import { getAllPostsMetadata } from "./providers/mdxProvider";
+import HeaderClient from "./components/HeaderClient";
 
-  export default function Home() {
+  export default function Home({searchTerm=""}) {
+    const posts = getAllPostsMetadata();
+
+    const filtered = searchTerm
+    ? posts.filter(post =>
+        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (post.tags || []).some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      )
+    : posts;
+
+
     return (
       <LenisProvider>
       <div className="bg-[#030712] text-white min-h-screen flex flex-col">
-        <Header />
+          <HeaderClient posts={posts} />
         
         <main className="py-3 px-4 sm:px-8 flex-grow">
           <div className="max-w-5xl mx-auto flex flex-col gap-5">
@@ -49,8 +61,8 @@
             {/* BLOG GRID */}
           <section className="relative isolate overflow-hidden bg-[#030712] border border-gray-800 rounded-2xl px-3 py-6 sm:px-6 lg:px-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[...Array(3)].map((_, index) => (
-                <BlogPost key={`post-${index}`} index={index} />
+              {filtered.map((post, index) => (
+                <BlogPost key={post.slug} post={post} index={index} />
               ))}
             </div>
             {/* Optional: Add the gradient bottom effect from AboutSection if desired */}

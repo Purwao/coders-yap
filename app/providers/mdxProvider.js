@@ -16,9 +16,33 @@ export function getAllPostSlugs() {
     .map((file) => file.replace(/\.mdx$/, ""));
 }
 
+export function getAllPostsMetadata() {
+  const filenames = fs.readdirSync(postsDirectory);
+
+  return filenames
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => {
+      const filePath = path.join(postsDirectory, file);
+      const raw = fs.readFileSync(filePath, "utf8");
+      const { data } = matter(raw);
+
+      console.log(data);
+
+      return {
+        slug: file.replace(/\.mdx$/, ""),
+        title: data.title || "Untitled Post",
+        date: data.date || null,
+        tags: data.tags || [],
+        description: data.description || "",
+        author: data.author || "Anonymous",
+        cover: data.cover || null,
+      };
+    });
+}
+
 export async function getPostBySlug(slug) {
-  const filePath = path.join(postsDirectory, `${slug}.mdx`);
-  if (!fs.existsSync(filePath)) return null;
+  const filePath = path.join(postsDirectory, `${slug}.mdx`); // cek apakah blog available
+  if (!fs.existsSync(filePath)) return null; // 404 if not found
 
   const raw = fs.readFileSync(filePath, "utf8");
   const { content, data } = matter(raw);

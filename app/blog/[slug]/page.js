@@ -1,6 +1,5 @@
-import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
-import { getPostBySlug } from "../../providers/mdxProvider";
+import { getAllPostsMetadata, getPostBySlug } from "../../providers/mdxProvider";
 import { notFound } from "next/navigation";
 import CalendarIcon from "@/app/components/CalendarIcon";
 import ClockIcon from "@/app/components/ClockIcon";
@@ -10,6 +9,7 @@ import ChevronDownIcon from "@/app/components/ChevronDownIcon";
 import DocumentTextIcon from "@/app/components/DocumentTetIcon";
 import InformationCircleIcon from "@/app/components/InformationCircleIcon";
 import LenisProvider from "../../providers/LenisProvider";
+import HeaderClient from "@/app/components/HeaderClient";
 
 export async function generateStaticParams() {
   const { getAllPostSlugs } = await import("../../providers/mdxProvider");
@@ -21,10 +21,12 @@ export default async function BlogPostPage({ params }) {
   const post = await getPostBySlug(params.slug);
   if (!post) return notFound();
 
+  const posts= getAllPostsMetadata();
+
   return (
   <LenisProvider>
   <div className="bg-[#030712] text-white min-h-screen flex flex-col">
-  <Header />
+  <HeaderClient posts={posts} />
   <article className="max-w-4xl mx-auto px-4 sm:px-6 py-12 flex-grow w-full">
     {/* Enhanced animated header section */}
    
@@ -126,7 +128,7 @@ export default async function BlogPostPage({ params }) {
 
       {/* Desktop TOC - enhanced */}
       {post.headings?.length > 0 && (
-        <aside className="hidden md:block w-64 flex-shrink-0">
+        <aside className="hidden md:block w-64  flex-shrink-0">
           <div className="sticky top-24 space-y-4">
             <div className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl backdrop-blur-sm">
               <h2 className="flex items-center gap-2 text-lg font-semibold mb-3">
