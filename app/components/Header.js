@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { NAV_ITEMS } from "../constant";
+import { NAV_ITEMS, NAV_LINKS } from "../constant";
 
 export default function Header({
   input,
@@ -29,7 +29,7 @@ export default function Header({
           onFocus={() => setShowResults(true)}
           onBlur={() => setTimeout(() => setShowResults(false), 200)}
           placeholder="Search posts... (e.g. tag:frontend react)"
-          className="w-full bg-[#111827] border border-gray-700 text-white text-sm rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:text-gray-500 transition-all"
+          className="min-w-80 bg-[#111827] border border-gray-700 text-white text-sm rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:text-gray-500 transition-all"
         />
 
         {/* Active Filter Badges */}
@@ -89,10 +89,10 @@ export default function Header({
 
       {/* Navigation */}
       <nav className="flex flex-wrap gap-6 text-sm">
-        {NAV_ITEMS.map((item) => (
+        {NAV_ITEMS.map((item,index) => (
           <Link
             key={item}
-            href={`/${item.toLowerCase()}`}
+            href={`/${NAV_LINKS[index]}`}
             className="text-[#9ca3af] hover:text-white transition-colors hover:underline underline-offset-4 decoration-[#66b2ff]"
           >
             {item}

@@ -26,7 +26,7 @@ const BlogPost = React.memo(({ index, post }) => {
     <AnimatedCard key={`blog-post-${index}`}>
       <div
    
-        className="group relative bg-[#1f2937] border border-gray-800 rounded-2xl overflow-hidden shadow-md transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] transform-gpu hover:-translate-y-2 hover:scale-[1.1] hover:shadow-blue-500/30 hover:border-blue-500"
+        className="group relative bg-[#111827] border border-gray-800 rounded-2xl overflow-hidden shadow-md transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] transform-gpu hover:-translate-y-2 hover:scale-[1.1] hover:shadow-blue-500/30 hover:border-blue-500"
       >
         <Link    href={`/blog/${slug}`}>
         {/* Background Gradient */}
