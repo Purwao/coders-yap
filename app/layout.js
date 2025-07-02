@@ -1,4 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
+
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +12,8 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+
 
 export const metadata = {
   title: "Create Next App",

@@ -7,6 +7,10 @@ const nextConfig = {
         hostname: 'www.w3schools.com',
         pathname: '/w3css/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'dummyimage.com',
+      },
     ],
   },
    experimental: {
