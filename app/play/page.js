@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
+import CommentSection from "../components/CommentSection";
 
 export default function ScrollFadeInPage() {
   const ScrollFadeInSection = ({ children }) => {
@@ -55,6 +56,8 @@ export default function ScrollFadeInPage() {
       <div className="h-screen flex items-center justify-center text-xl">
         🧼 You reached the bottom!
       </div>
+
+      <CommentSection />
     </div>
   );
 }
