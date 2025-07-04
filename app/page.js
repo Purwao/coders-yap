@@ -6,6 +6,8 @@
   import LenisProvider from "./providers/LenisProvider";
   import { getAllPostsMetadata } from "./providers/mdxProvider";
 import HeaderClient from "./components/HeaderClient";
+import Link from "next/link";
+import SlideInCard from "./components/AnimatedCard2";
 
   export default function Home({searchTerm=""}) {
     const posts = getAllPostsMetadata();
@@ -26,6 +28,8 @@ import HeaderClient from "./components/HeaderClient";
         <main className="py-3 px-4 sm:px-8 flex-grow">
           <div className="max-w-5xl mx-auto flex flex-col gap-5">
             {/* HERO SECTION */}
+            <SlideInCard>
+
             <section className="flex flex-col gap-0 text-start">
               <p className="text-[#9ca3af] text-xs uppercase">Blog</p>
               <div className="flex flex-col">
@@ -39,13 +43,15 @@ import HeaderClient from "./components/HeaderClient";
                 </p>
               </div>
             </section>
+            </SlideInCard>
 
             <hr className="border-t border-gray-800 border-2" />
 
             {/* TAGS FILTER */}
             <section className="flex flex-wrap gap-3 sm:gap-4">
               {TAGS.map((label, i) => (
-                <button
+                <Link
+                href={`tags/${label.toLocaleLowerCase()}`}
                   key={label}
                   className={`px-6 py-2 rounded-3xl text-sm font-semibold transition ${
                     i === 0
@@ -54,7 +60,7 @@ import HeaderClient from "./components/HeaderClient";
                   }`}
                 >
                   {label}
-                </button>
+                </Link>
               ))}
             </section>
 

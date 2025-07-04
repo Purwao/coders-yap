@@ -95,3 +95,22 @@ const { content: mdxContent } = await compileMDX({
     headings
   };
 }
+
+export function getAllTags() {
+  const posts = getAllPostsMetadata();
+  const tagSet = new Set();
+
+  posts.forEach((post) => {
+    post.tags?.forEach((tag) => tagSet.add(tag));
+  });
+
+  return Array.from(tagSet);
+}
+
+export function getPostsByTag(tag) {
+  const posts = getAllPostsMetadata();
+  return posts.filter((post) =>
+    post.tags?.map((t) => t.toLowerCase()).includes(tag.toLowerCase())
+  );
+}
+

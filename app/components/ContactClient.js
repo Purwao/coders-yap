@@ -71,7 +71,7 @@ export default function ContactClient({ posts }) {
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4 border-b border-gray-700">
                 <button
-                  className="w-full flex justify-between items-center py-4 text-left font-mono font-bold text-lg focus:outline-none"
+                  className="w-full cursor-pointer flex justify-between items-center py-4 text-left font-mono font-bold text-lg focus:outline-none"
                   onClick={() => toggleAccordion(index)}
                 >
                   <span>{faq.question}</span>
