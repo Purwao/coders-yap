@@ -17,9 +17,9 @@ export default function AboutSection() {
         a space where I can rant, experiment, break things, and reflect on code and creativity.
       </p>
       <p className="text-[#9ca3af] text-base leading-relaxed mb-4">
-        It&apos;s built with <span className="text-blue-400">Next.js</span>, styled with{" "}
+        It&apos;s primarily built with <span className="text-blue-400">Next.js</span>, styled with{" "}
         <span className="text-blue-400">TailwindCSS</span>, and powered by lots of trial-and-error.
-        From animated UIs to content filters — everything here is handcrafted.
+        From animated UIs to content filters — everything here is my handicraft! 
       </p>
       <p className="text-[#9ca3af] text-base leading-relaxed mb-6">
         I&apos;m focused on indie development — making tools and blogs that feel
