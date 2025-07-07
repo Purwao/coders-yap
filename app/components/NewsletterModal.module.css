@@ -1,0 +1,56 @@
+.mascot {
+  animation: mascotSlideIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes mascotSlideIn {
+  0% {
+    transform: translateX(-80px) rotate(-10deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+.fadeOut {
+  animation: fadeOut 0.5s ease forwards;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  to {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+.newspaperAnim {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+  opacity: 0;
+}
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px) rotate(-200deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}

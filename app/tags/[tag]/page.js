@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getAllTags, getPostsByTag } from "@/app/providers/mdxProvider";
+import { getAllPostsMetadata, getAllTags, getPostsByTag } from "@/app/providers/mdxProvider";
 import BlogPost from "@/app/components/BlogPost";
 
 
@@ -11,7 +11,13 @@ export async function generateStaticParams() {
 
 export default function TagPage({ params }) {
   const { tag } = params;
-  const posts = getPostsByTag(tag);
+  let posts;
+
+  if (tag == "all") {
+    posts=getAllPostsMetadata();
+  }else{
+    posts=getPostsByTag(tag);
+  }
 
   if (!posts || posts.length === 0) {
     return (

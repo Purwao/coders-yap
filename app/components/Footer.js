@@ -7,8 +7,12 @@ export default function Footer() {
         {/* Left side: site title & tagline */}
         <div>
           <h2 className="text-white text-lg font-semibold">CodersYap</h2>
-          <p className="mt-1 text-gray-500">Nerd rants from a not-so-quiet mind.</p>
-          <p className="mt-2 text-gray-600">© {new Date().getFullYear()} CodersYap. All rights reserved.</p>
+          <p className="mt-1 text-gray-500">
+            Nerd rants from a not-so-quiet mind.
+          </p>
+          <p className="mt-2 text-gray-600">
+            © {new Date().getFullYear()} CodersYap. All rights reserved.
+          </p>
         </div>
 
         {/* Right side: navigation and social */}
@@ -16,19 +20,52 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-medium mb-2">Site</h3>
             <ul className="space-y-1">
-              <li><Link href="/" className="hover:text-white">Home</Link></li>
-              <li><Link href="/posts" className="hover:text-white">Posts</Link></li>
-              <li><Link href="/tags" className="hover:text-white">Tags</Link></li>
-              <li><Link href="/about" className="hover:text-white">About</Link></li>
+              <li>
+                <Link href="/" className="hover:text-white">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-white">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-white font-medium mb-2">Social</h3>
             <ul className="space-y-1">
-              <li><Link href="https://github.com/Purwao" target="_blank" rel="noopener noreferrer" className="hover:text-white">GitHub</Link></li>
-              <li><Link href="mailto:your@email.com" className="hover:text-white">Email</Link></li>
-              <li><Link href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="hover:text-white">X (Twitter)</Link></li>
+              <li>
+                <Link
+                  href="https://github.com/Purwao"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  GitHub
+                </Link>
+              </li>
+              <li>
+                <Link href="mailto:purwao.dev@email.com" className="hover:text-white">
+                  Email
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://instagram.com/purwrdan26"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Instagram
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

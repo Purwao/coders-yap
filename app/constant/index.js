@@ -1,4 +1,4 @@
-export const TAGS = ["All", "Fullstack", "Frontend", "Backend", "UI-UX", "Website"];
+export const TAGS = ["All", "Fullstack", "Frontend", "Backend", "UI-UX", "Web-Dev"];
 export const NAV_ITEMS = ["Home","About", "Contact"];
 export const NAV_LINKS = ["/","about","contact"];
 export const roles = [
@@ -8,7 +8,7 @@ export const roles = [
     name: "Purwa Arda",
     title: "The Brain",
     codename: "Ace",
-    image: "/assets/images/brain.jpg",
+    image: "/assets/images/about/brain.jpg",
     description: "Held the line in Chernobog — not because he had to, but because someone needed to.",
     suit: "♥",
     hand: "A"
@@ -19,7 +19,7 @@ export const roles = [
     name: "Purwa A.",
     title: "Developer",
     codename: "Ashen One",
-    image: "/assets/images/dev.jpg",
+    image: "/assets/images/about/dev.jpg",
     description: "The fire fades, and the lords go without thrones. So the Ashen One writes the patch notes.",
     suit: "♦",
     hand: "K"
@@ -30,7 +30,7 @@ export const roles = [
     name: "P. Arda",
     title: "Designer",
     codename: "Leo",
-    image: "/assets/images/designer.jpg",
+    image: "/assets/images/about/designer.jpg",
     description: "Designs like Fnatic’s Leo plays — calm under pressure, deadly with pixels.",
     suit: "♠",
     hand: "Q"
@@ -41,7 +41,7 @@ export const roles = [
     name: "Arda Purwa",
     title: "Blogger",
     codename: "White Nights",
-    image: "/assets/images/blogger.jpg",
+    image: "/assets/images/about/blogger.jpg",
     description: "Four nights were enough for Dostoevsky’s dreamer — this one’s still writing about it.",
     suit: "♣",
     hand: "J"
@@ -52,7 +52,7 @@ export const roles = [
     name: "Purwa (Intern)",
     title: "Intern",
     codename: "The Eternal Newbie",
-    image: "/assets/images/intern.jpg",
+    image: "/assets/images/about/intern.jpg",
     description: "Still 'getting familiar' with the codebase — 11 months in btw.",
     suit: "♥",
     hand: 7

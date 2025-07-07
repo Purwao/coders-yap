@@ -42,3 +42,4 @@ next-env.d.ts
 
 #template
 app/posts/first-rant.mdx
+app\components\NewletterModal.js

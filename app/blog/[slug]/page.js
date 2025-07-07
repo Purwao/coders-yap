@@ -14,6 +14,8 @@ import InformationCircleIcon from "@/app/components/InformationCircleIcon";
 import LenisProvider from "../../providers/LenisProvider";
 import HeaderClient from "@/app/components/HeaderClient";
 import CommentSection from "@/app/components/CommentSection";
+import NewsletterModal from "@/app/components/NewletterModal";
+
 
 
 export async function generateStaticParams() {
@@ -32,6 +34,7 @@ export default async function BlogPostPage({ params }) {
     <LenisProvider>
       <div className="bg-[#030712] text-white min-h-screen flex flex-col">
         <HeaderClient posts={posts} />
+                <NewsletterModal></NewsletterModal>
         <article className="max-w-4xl mx-auto px-4 sm:px-6 py-12 flex-grow w-full">
           {/* Enhanced animated header section */}
 

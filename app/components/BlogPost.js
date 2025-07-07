@@ -28,7 +28,8 @@ const BlogPost = React.memo(({ index, post }) => {
    
         className="group relative bg-[#111827] border border-gray-800 rounded-2xl overflow-hidden shadow-md transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] transform-gpu hover:-translate-y-2 hover:scale-[1.1] hover:shadow-blue-500/30 hover:border-blue-500"
       >
-        <Link    href={`/blog/${slug}`}>
+        <Link    
+          href={`/blog/${slug}`}>
         {/* Background Gradient */}
         <div className="pointer-events-none absolute inset-0 z-0 rounded-2xl bg-gradient-to-br from-[#0f172a]/80 via-transparent to-[#0f172a]/80 opacity-80 group-hover:opacity-90 transition-opacity duration-700" />
 
@@ -67,13 +68,12 @@ const BlogPost = React.memo(({ index, post }) => {
             <span>{formattedDate}</span>
             {tags.length > 0 && <span className="text-[#4b5563]">|</span>}
             {tags.map((tag) => (
-              <Link 
-                href={`/tags/${tag}`.toLocaleLowerCase()}
+              <span 
                 key={tag}
-                className="bg-[#374151] text-white px-2 py-0.5 rounded-full transition-all duration-300 hover:scale-110 hover:text-blue-300 hover:shadow-[0_0_8px_rgba(96,165,250,0.4)]"
+                className="bg-[#374151] text-white px-2 py-0.5 rounded-full"
               >
                 {tag}
-              </Link>
+              </span>
             ))}
           </div>
 

@@ -10,7 +10,8 @@ function AboutPage() {
   return (
     <>
       <LenisProvider>
-        <HeaderClient posts={posts} />{" "}
+        <HeaderClient posts={posts} />
+
         <main className="bg-[#030712] text-black py-12 px-6 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Side: Title & Pronunciation */}
           <div className="flex-shrink-0">

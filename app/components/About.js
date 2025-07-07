@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import AnimatedCard from "./AnimatedCard";
-import imgplaceholder from "/public/ehhe.jpg";
+import imgplaceholder from "/public/assets/images/about/ehhe.jpg";
 
 export default function AboutSection() {
   return (
