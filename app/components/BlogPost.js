@@ -67,12 +67,13 @@ const BlogPost = React.memo(({ index, post }) => {
             <span>{formattedDate}</span>
             {tags.length > 0 && <span className="text-[#4b5563]">|</span>}
             {tags.map((tag) => (
-              <span
+              <Link 
+                href={`/tags/${tag}`.toLocaleLowerCase()}
                 key={tag}
                 className="bg-[#374151] text-white px-2 py-0.5 rounded-full transition-all duration-300 hover:scale-110 hover:text-blue-300 hover:shadow-[0_0_8px_rgba(96,165,250,0.4)]"
               >
                 {tag}
-              </span>
+              </Link>
             ))}
           </div>
 

@@ -57,8 +57,15 @@ export default async function BlogPostPage({ params }) {
               )}
               <span className="text-gray-600 hidden sm:inline">•</span>
               <div className="flex items-center gap-2">
-                <ClockIcon className="h-5 w-5 text-blue-400" />
-                <span>5 min read</span>
+                {post.frontMatter?.date && (
+                            <div className="flex items-center gap-3">
+                          
+                              <ClockIcon className="h-5 w-5 flex-shrink-0 text-blue-400" />
+
+                              <span>{post.frontMatter.readtime}</span>
+                        </div>
+                       
+                      )}
               </div>
               {post.frontMatter?.tags && (
                 <>
@@ -131,7 +138,7 @@ export default async function BlogPostPage({ params }) {
 
               {/* Article body with enhanced prose styling */}
               <div className="prose prose-invert max-w-none">
-                <div className="text-gray-300 space-y-6 text-base leading-relaxed">
+                <div className="text-gray-300 space-y-6 text-base text-justify leading-relaxed">
                   {post.mdxSource ? (
                     post.mdxSource
                   ) : (
@@ -211,8 +218,15 @@ export default async function BlogPostPage({ params }) {
                         </div>
                       )}
                       <div className="flex items-center gap-3">
-                        <ClockIcon className="h-4 w-4 flex-shrink-0" />
-                        <span>5 min read</span>
+                          {post.frontMatter?.date && (
+                            <div className="flex items-center gap-3">
+                          
+                              <ClockIcon className="h-4 w-4 flex-shrink-0" />
+
+                              <span>{post.frontMatter.readtime}</span>
+                        </div>
+                       
+                      )}
                       </div>
                       {post.frontMatter?.tags && (
                         <div className="flex items-start gap-3">

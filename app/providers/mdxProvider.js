@@ -36,6 +36,7 @@ export function getAllPostsMetadata() {
         description: data.description || "",
         author: data.author || "Anonymous",
         cover: data.cover || null,
+        readtime: data.readtime || "5 Minutes Read",
       };
     });
 }
