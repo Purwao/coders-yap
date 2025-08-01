@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { NAV_ITEMS, NAV_LINKS } from "../constant";
+import Image from "next/image";
 
 export default function Header({
   input,
@@ -15,6 +16,12 @@ export default function Header({
     <header className="sticky top-0 z-50 bg-[#030712] px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-4 border-b border-gray-800 backdrop-blur-sm bg-opacity-90">
       {/* Logo */}
       <Link href="/" className="group flex items-center gap-2">
+        <Image
+            src="/codersyap.webp"
+            width={50}
+            height={50}
+            alt="codersyap"
+        />
         <h1 className="text-xl font-bold text-[#66b2ff] group-hover:text-[#3a8cff] transition-colors">
           CodersYap
         </h1>

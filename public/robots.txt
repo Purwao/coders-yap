@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://codersyap.vercel.app
+
+# Sitemaps
+Sitemap: https://codersyap.vercel.app/sitemap.xml

@@ -24,6 +24,44 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
+export async function generateMetadata({ params }) {
+  const post = await getPostBySlug(params.slug);
+
+  if (!post) return {};
+
+  return {
+    title: post.frontMatter.title,
+    description: post.frontMatter.description ?? "Read this article on CodersYap.",
+
+
+    authors: [{ name: post.frontMatter.author }],
+    openGraph: {
+      title: post.frontMatter.title,
+
+
+      type: "article",
+      publishedTime: post.frontMatter.date,
+      url: `https://codersyap.vercel.app/blog/${params.slug}`,
+      images: [
+        {
+          url: [post.frontMatter.cover ?? "https://codersyap.vercel.app/codersyap.webp"],
+          width: 1200,
+          height: 630,
+          alt:[post.frontMatter.cover ?? "https://codersyap.vercel.app/codersyap.webp"],
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.frontMatter.title,
+  description: post.frontMatter.description ?? "Read this article on CodersYap.",
+
+      images: [post.frontMatter.cover ?? "https://codersyap.vercel.app/codersyap.webp"],
+    },
+  };
+}
+
+
 export default async function BlogPostPage({ params }) {
   const post = await getPostBySlug(params.slug);
   if (!post) return notFound();
