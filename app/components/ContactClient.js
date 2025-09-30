@@ -53,8 +53,9 @@ export default function ContactClient({ posts }) {
       Let&apos;s rant about OUR code!   
     </h1>
     <p className="font-mono text-md text-gray-300 max-w-2xl mx-auto">
-      Whether you&apos;ve got feedback, a burning question, or want to suggest a topic for my next rant, 
-      I&apos;m all ears. Well, metaphorically. I don&apos;t actually have ears on this website.
+            I welcome your thoughts and inquiries.
+            Whether you have feedback, a specific question,
+            or a suggestion for future topics, I’d be glad to hear from you
     </p>
   </div>
 </main>
