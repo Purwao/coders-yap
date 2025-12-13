@@ -29,20 +29,13 @@ function AboutPage() {
           {/* Right Side: Description */}
           <div className="max-w-xl text-white font-mono text-md leading-relaxed">
             <p className="mb-4">
-              Even if you don’t know me yet, you’ve likely stumbled onto one of
-              my code-fueled rants. CodersYap is where I yell into the void of
-              the internet, mostly about code, sometimes about bugs, and
-              occasionally about life.
+              This is CodersYap, a space where I share development insights,
+              document experiments, and occasionally a reflection. 
             </p>
             <p className="mb-4">
-              It’s a blog where I rant myself to the dead — blending tech
-              thoughts, dev experiments, and chaotic energy. Think of it as an
-              over-engineered diary with syntax highlighting.
-            </p>
-            <p>
-              Built with <span className="font-bold">Next.js</span>, styled with{" "}
-              <span className="font-bold">TailwindCSS</span>, and driven by
-              caffeine, stubbornness, and a love for problem-solving.
+              It also serves as my personal footnotes: a record of how far I’ve
+              come, the lessons I’ve learned, and a portfolio of projects and
+              thoughts along the way.
             </p>
           </div>
         </main>

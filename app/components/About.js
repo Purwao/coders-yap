@@ -12,19 +12,17 @@ export default function AboutSection() {
       <h2 className="text-4xl font-extrabold mb-4">
         Hi there! I&apos;m Purwa.
       </h2>
-      <p className="text-[#9ca3af] text-base leading-relaxed mb-4">
-        I started building this blog not only as a portfolio, but as a playground —
-        a space where I can rant, experiment, break things, and reflect on code and creativity.
-      </p>
-      <p className="text-[#9ca3af] text-base leading-relaxed mb-4">
-        It&apos;s primarily built with <span className="text-blue-400">Next.js</span>, styled with{" "}
-        <span className="text-blue-400">TailwindCSS</span>, and powered by lots of trial-and-error.
-        From animated UIs to content filters — everything here is my handicraft! 
-      </p>
-      <p className="text-[#9ca3af] text-base leading-relaxed mb-6">
-        I&apos;m focused on indie development — making tools and blogs that feel
-        both personal, and polished
-      </p>
+         <div className="max-w-xl text-white font-mono text-md leading-relaxed">
+            <p className="mb-4">
+              Hi, I’m Purwa. A developer who does things like building, experimenting,
+              and learning through code n stuff !
+            </p>
+            <p className="mb-4">
+              CodersYap is where I share insights, document experiments, and
+              reflect on the process. This also serves as my personal footnotes 
+              a record of the growth, lessons learned, and projects along the way.
+            </p>
+          </div>      
       <a
         href="https://purwao.vercel.app" // <-- replace with your real URL
         target="_blank"
