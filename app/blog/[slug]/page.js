@@ -47,14 +47,14 @@ export async function generateMetadata({ params }) {
           url: [post.frontMatter.cover ?? "https://codersyap.vercel.app/codersyap.webp"],
           width: 1200,
           height: 630,
-          alt:[post.frontMatter.cover ?? "https://codersyap.vercel.app/codersyap.webp"],
+          alt: [post.frontMatter.cover ?? "https://codersyap.vercel.app/codersyap.webp"],
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.frontMatter.title,
-  description: post.frontMatter.description ?? "Read this article on CodersYap.",
+      description: post.frontMatter.description ?? "Read this article on CodersYap.",
 
       images: [post.frontMatter.cover ?? "https://codersyap.vercel.app/codersyap.webp"],
     },
@@ -72,7 +72,7 @@ export default async function BlogPostPage({ params }) {
     <LenisProvider>
       <div className="bg-[#030712] text-white min-h-screen flex flex-col">
         <HeaderClient posts={posts} />
-                <NewsletterModal></NewsletterModal>
+        <NewsletterModal></NewsletterModal>
         <article className="max-w-4xl mx-auto px-4 sm:px-6 py-12 flex-grow w-full">
           {/* Enhanced animated header section */}
 
@@ -99,14 +99,14 @@ export default async function BlogPostPage({ params }) {
               <span className="text-gray-600 hidden sm:inline">•</span>
               <div className="flex items-center gap-2">
                 {post.frontMatter?.date && (
-                            <div className="flex items-center gap-3">
-                          
-                              <ClockIcon className="h-5 w-5 flex-shrink-0 text-blue-400" />
+                  <div className="flex items-center gap-3">
 
-                              <span>{post.frontMatter.readtime}</span>
-                        </div>
-                       
-                      )}
+                    <ClockIcon className="h-5 w-5 flex-shrink-0 text-blue-400" />
+
+                    <span>{post.frontMatter.readtime}</span>
+                  </div>
+
+                )}
               </div>
               {post.frontMatter?.tags && (
                 <>
@@ -151,22 +151,20 @@ export default async function BlogPostPage({ params }) {
                           <li key={`mobile-${heading.slug}`}>
                             <a
                               href={`#${heading.slug}`}
-                              className={`flex items-center py-1.5 hover:text-blue-400 transition-colors ${
-                                heading.depth === 3
+                              className={`flex items-center py-1.5 hover:text-blue-400 transition-colors ${heading.depth === 3
                                   ? "pl-6"
                                   : heading.depth === 2
-                                  ? "pl-3"
-                                  : ""
-                              }`}
+                                    ? "pl-3"
+                                    : ""
+                                }`}
                             >
                               <span
-                                className={`inline-block w-1.5 h-1.5 rounded-full mr-3 ${
-                                  heading.depth === 1
+                                className={`inline-block w-1.5 h-1.5 rounded-full mr-3 ${heading.depth === 1
                                     ? "bg-blue-500"
                                     : heading.depth === 2
-                                    ? "bg-blue-400"
-                                    : "bg-blue-300"
-                                }`}
+                                      ? "bg-blue-400"
+                                      : "bg-blue-300"
+                                  }`}
                               ></span>
                               {heading.value}
                             </a>
@@ -178,8 +176,8 @@ export default async function BlogPostPage({ params }) {
               )}
 
               {/* Article body with enhanced prose styling */}
-              <div className="prose prose-invert max-w-none">
-                <div className="text-gray-300 space-y-6 text-base text-justify leading-relaxed">
+              <div className="bg-gradient-to-br from-gray-900/40 to-gray-900/10 border border-gray-800 rounded-xl px-8 sm:px-10 backdrop-blur-sm">
+                <div className="prose prose-invert prose-headings:no-underline max-w-none">
                   {post.mdxSource ? (
                     post.mdxSource
                   ) : (
@@ -213,22 +211,20 @@ export default async function BlogPostPage({ params }) {
                           <li key={heading.slug}>
                             <a
                               href={`#${heading.slug}`}
-                              className={`flex items-center py-1.5 hover:text-blue-400 transition-colors ${
-                                heading.depth === 3
+                              className={`flex items-center py-1.5 hover:text-blue-400 transition-colors ${heading.depth === 3
                                   ? "pl-6"
                                   : heading.depth === 2
-                                  ? "pl-3"
-                                  : ""
-                              }`}
+                                    ? "pl-3"
+                                    : ""
+                                }`}
                             >
                               <span
-                                className={`inline-block w-1.5 h-1.5 rounded-full mr-3 ${
-                                  heading.depth === 1
+                                className={`inline-block w-1.5 h-1.5 rounded-full mr-3 ${heading.depth === 1
                                     ? "bg-blue-500"
                                     : heading.depth === 2
-                                    ? "bg-blue-400"
-                                    : "bg-blue-300"
-                                }`}
+                                      ? "bg-blue-400"
+                                      : "bg-blue-300"
+                                  }`}
                               ></span>
                               {heading.value}
                             </a>
@@ -259,15 +255,15 @@ export default async function BlogPostPage({ params }) {
                         </div>
                       )}
                       <div className="flex items-center gap-3">
-                          {post.frontMatter?.date && (
-                            <div className="flex items-center gap-3">
-                          
-                              <ClockIcon className="h-4 w-4 flex-shrink-0" />
+                        {post.frontMatter?.date && (
+                          <div className="flex items-center gap-3">
 
-                              <span>{post.frontMatter.readtime}</span>
-                        </div>
-                       
-                      )}
+                            <ClockIcon className="h-4 w-4 flex-shrink-0" />
+
+                            <span>{post.frontMatter.readtime}</span>
+                          </div>
+
+                        )}
                       </div>
                       {post.frontMatter?.tags && (
                         <div className="flex items-start gap-3">
@@ -292,12 +288,12 @@ export default async function BlogPostPage({ params }) {
           </div>
         </article>
         {/* Comment section (full width) */}
-<section className="w-full px-4 sm:px-6 py-12 bg-[#0f172a] border-t border-gray-800">
-  <div className="max-w-5xl mx-auto">
+        <section className="w-full px-4 sm:px-6 py-12 bg-[#0f172a] border-t border-gray-800">
+          <div className="max-w-5xl mx-auto">
 
-    <CommentSection />
-  </div>
-</section>
+            <CommentSection />
+          </div>
+        </section>
         <Footer />
       </div>
     </LenisProvider>

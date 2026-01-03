@@ -7,7 +7,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { visit } from "unist-util-visit";
 
-const postsDirectory = path.join(process.cwd(), "app", "posts");
+const postsDirectory = path.join(process.cwd(), "app", "posts"); 
 
 export function getAllPostSlugs() {
   const filenames = fs.readdirSync(postsDirectory);
@@ -37,6 +37,8 @@ export function getAllPostsMetadata() {
         author: data.author || "Anonymous",
         cover: data.cover || null,
         readtime: data.readtime || "5 Minutes Read",
+        newpost: data.new || false
+      
       };
     });
 }

@@ -65,15 +65,15 @@ import SlideInCard from "./components/AnimatedCard2";
             </section>
 
             {/* BLOG GRID */}
-          <section className="relative isolate overflow-hidden bg-[#030712] border border-gray-800 rounded-2xl px-3 py-6 sm:px-6 lg:px-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <section className=" relative isolate overflow-hidden bg-[#030712] border border-gray-800 rounded-2xl px-3 py-6 sm:px-6 lg:px-6">
+            <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filtered.map((post, index) => (
-                <BlogPost key={post.slug} post={post} index={index} />
+                <BlogPost key={post.slug} post={post} index={index}  />
               ))}
             </div>
             {/* Optional: Add the gradient bottom effect from AboutSection if desired */}
             <div 
-              className="absolute bottom-0 left-0 w-full h-24 bg-[radial-gradient(ellipse_at_bottom,rgba(31,41,55,0.5),transparent)] pointer-events-none"
+              className="absolute bottom-0 left-0 w-full h-24 bg-linear-to-b to-gray-700 opacity-40 pointer-events-none"
               aria-hidden
             />
           </section>

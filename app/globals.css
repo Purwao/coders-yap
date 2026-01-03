@@ -58,28 +58,43 @@ body {
   /* border-radius: 100px; */
 }
 
+
 /* mdx styling */
+.prose h1 a,
+.prose h2 a,
+.prose h3 a{
+  text-decoration: none !important;
+  color: #fff;
+}
+
 .prose {
+  /* Headings */
   h1 {
-    @apply text-3xl font-bold mt-10 mb-4 text-white border-b border-gray-800 pb-2;
+    @apply text-3xl font-bold text-white border-b border-gray-800;
+    @apply mt-12 mb-6 pb-2; /* consistent spacing */
   }
 
   h2 {
-    @apply text-2xl font-bold mt-10 mb-4 text-white border-b border-gray-800 pb-2;
+    @apply text-2xl font-bold text-white border-b border-gray-700;
+    @apply mt-12 mb-6 pb-2;
   }
 
   h3 {
-    @apply text-xl font-semibold mt-8 mb-3 text-white;
+    @apply text-xl font-semibold text-white border-b border-gray-700;
+    @apply mt-12 mb-6 pb-2;
   }
 
+  /* Paragraphs */
   p {
-    @apply my-4 leading-relaxed;
+    @apply mt-4 mb-4 text-gray-300 leading-relaxed tracking-wide;
   }
 
+  /* Links */
   a {
     @apply text-blue-400 hover:text-blue-300 underline;
   }
 
+  /* Emphasis */
   strong {
     @apply font-bold text-white;
   }
@@ -88,19 +103,22 @@ body {
     @apply italic;
   }
 
+  /* Lists */
   ul,
   ol {
-    @apply my-4 pl-6;
+    @apply pl-6 mt-4 mb-4 text-gray-300 leading-relaxed tracking-wide;
   }
 
   li {
-    @apply my-2 list-disc;
+    @apply mt-2 mb-2 list-disc;
   }
 
+  /* Blockquotes */
   blockquote {
-    @apply border-l-4 border-gray-600 pl-4 italic text-gray-400 my-6;
+    @apply border-l-4 border-blue-400 pl-6 py-4 italic text-gray-300 my-6 bg-gray-900/40 rounded;
   }
 
+  /* Code */
   code {
     @apply bg-gray-800 text-gray-100 px-2 py-1 rounded text-sm;
   }
@@ -109,10 +127,10 @@ body {
     @apply bg-gray-800 rounded p-4 overflow-x-auto my-6;
   }
 
+  /* Divider */
   hr {
-    @apply my-8 border-gray-800;
+    @apply my-12 border-gray-800;
   }
-
 }
 
 /* style flipcard */

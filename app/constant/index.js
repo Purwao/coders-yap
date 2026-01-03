@@ -6,10 +6,10 @@ export const roles = [
     id: 1,
     emoji: "🧠",
     name: "Purwa Arda",
-    title: "The Brain",
-    codename: "Ace",
+    title: "Strategist",
+    codename: "Doctor",
     image: "/assets/images/about/brain.jpg",
-    description: "Held the line in Chernobog — not because he had to, but because someone needed to.",
+    description: "Loss of memory didn't erase his nature, it only dulls the blade",
     suit: "♥",
     hand: "A"
   },
@@ -29,9 +29,9 @@ export const roles = [
     emoji: "🎨",
     name: "P. Arda",
     title: "Designer",
-    codename: "Leo",
+    codename: "Neunte Symphonie",
     image: "/assets/images/about/designer.jpg",
-    description: "Designs like Fnatic’s Leo plays — calm under pressure, deadly with pixels.",
+    description: "Design isn’t decoration — it’s orchestration.",
     suit: "♠",
     hand: "Q"
   },
@@ -42,7 +42,7 @@ export const roles = [
     title: "Blogger",
     codename: "White Nights",
     image: "/assets/images/about/blogger.jpg",
-    description: "Four nights were enough for Dostoevsky’s dreamer — this one’s still writing about it.",
+    description: "A dreamer in borrowed nights, turning the past into prose.",
     suit: "♣",
     hand: "J"
   },
@@ -64,7 +64,7 @@ export const roles = [
     title: "Janitor",
     codename: "The Hermit",
     image: "https://dummyimage.com/600x600/000/51a2ff&text=???",
-    description: "'Hermit', The unseen fixer. No fanfare, just a lantern and the patience to mend what others break.",
+    description: "The unseen fixer. Just a laptop and the patience to mend what others break.",
     hand: "Joker"
   }
 ];

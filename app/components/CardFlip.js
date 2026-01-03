@@ -118,9 +118,7 @@ function FlipCard({ role }) {
               </p>
             </div>
 
-            <p className="text-blue-500/80 text-[11px] font-mono tracking-wide mt-4">
-              CLASSIFIED: LEVEL {role.hand}
-            </p>
+            
           </div>
         </div>
       </div>
