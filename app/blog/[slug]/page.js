@@ -37,17 +37,15 @@ export async function generateMetadata({ params }) {
     authors: [{ name: post.frontMatter.author }],
     openGraph: {
       title: post.frontMatter.title,
-
-
       type: "article",
       publishedTime: post.frontMatter.date,
       url: `https://codersyap.vercel.app/blog/${params.slug}`,
       images: [
         {
-          url: [post.frontMatter.cover ?? "https://codersyap.vercel.app/codersyap.webp"],
+          url: post.frontMatter.cover ?? "https://codersyap.vercel.app/codersyap.webp",
           width: 1200,
           height: 630,
-          alt: [post.frontMatter.cover ?? "https://codersyap.vercel.app/codersyap.webp"],
+          alt: post.frontMatter.cover ?? "https://codersyap.vercel.app/codersyap.webp",
         },
       ],
     },

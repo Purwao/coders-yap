@@ -38,9 +38,9 @@ const BlogPost = React.memo(({ index, post }) => {
           <div className="overflow-hidden relative z-10">
             {cover && (
               <Image
+                src={cover}
                 height={180}
                 width={400}
-                src={cover}
                 loading="lazy"
                 alt="Blog thumbnail"
                 className="w-full h-32 object-cover transition-transform duration-700 group-hover:scale-105"

@@ -49,6 +49,7 @@ body {
 ::-webkit-scrollbar
 {
 	width: 10px;
+  height: 7px;
 	background-color: black;
 }
 
@@ -123,8 +124,44 @@ body {
     @apply bg-gray-800 text-gray-100 px-2 py-1 rounded text-sm;
   }
 
-  pre {
-    @apply bg-gray-800 rounded p-4 overflow-x-auto my-6;
+  /* pre {
+    @apply bg-gray-400 rounded p-4 overflow-x-auto my-6;
+  } */
+
+   /* Code block wrapper */
+  figure[data-rehype-pretty-code-figure] {
+    @apply my-2 overflow-hidden rounded-lg border border-slate-800 bg-slate-950;
+  }
+
+  /* Code title */
+  figcaption[data-rehype-pretty-code-title] {
+    @apply border-b border-slate-800 bg-slate-900 px-4 py-2 text-xs font-mono text-slate-300;
+  }
+
+  /* Pre */
+  figure[data-rehype-pretty-code-figure] pre {
+    @apply overflow-x-auto text-sm leading-relaxed px-4 py-2 bg-gray-800 text-gray-100;
+    
+  }
+
+  /* Code */
+  figure[data-rehype-pretty-code-figure] code {
+    @apply font-mono bg-gray-800 text-gray-100 ;
+  }
+
+  /* Line highlight support */
+  figure[data-rehype-pretty-code-figure] .line {
+    @apply block px-4;
+  }
+
+  /* Highlighted lines */
+  figure[data-rehype-pretty-code-figure] .line.highlighted {
+    @apply bg-slate-800/50;
+  }
+
+  /* Highlighted words */
+  figure[data-rehype-pretty-code-figure] .word {
+    @apply rounded bg-slate-800 px-1;
   }
 
   /* Divider */

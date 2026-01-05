@@ -6,6 +6,7 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { visit } from "unist-util-visit";
+import rehypePrettyCode from "rehype-pretty-code";
 
 const postsDirectory = path.join(process.cwd(), "app", "posts"); 
 
@@ -85,7 +86,12 @@ const { content: mdxContent } = await compileMDX({
             className: ["heading-anchor"],
             ariaHidden: true
           }
-        }]
+        }],
+         [rehypePrettyCode,
+        {
+          theme: "github-dark",
+          keepBackground: false,
+        }],
       ]
     }
   }

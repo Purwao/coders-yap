@@ -42,4 +42,5 @@ next-env.d.ts
 
 #template
 app/posts/first-rant.mdx
-app\components\NewletterModal.js
+app/posts/how-i-built-this-blog.mdx
+
